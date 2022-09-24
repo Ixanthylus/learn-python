@@ -11,8 +11,9 @@ elif (weight > 6) and (weight <= 10):
 elif weight > 10:
   cost_ground = weight * 4.75 + 20
 
-print('Ground Shipping: ${:.2f}'.format(cost_ground))
-print("Premium Ground: ${:.2f}{}".format(premium_ground,premium_ground_reminder))
+print('Cost of Ground Shipping:\n${:.2f}'.format(cost_ground))
+print()
+print("Cost of Premium Ground:\n${:.2f}{}".format(premium_ground,premium_ground_reminder))
 
 #Drone Shipping
 if weight <= 2:
@@ -24,7 +25,8 @@ elif (weight > 6) and (weight <= 10):
 elif weight > 10:
   cost_drone = weight * 14.25
 
-print('Drone Shipping: ${:.2f}'.format(cost_drone))
+print()
+print('Cost of Drone Shipping:\n${:.2f}'.format(cost_drone))
 all_costs = (cost_ground, premium_ground, cost_ground)
 
 if min(all_costs) == [0]:
@@ -34,5 +36,5 @@ elif min(all_costs) == [1]:
 else:
   shipping_type = "Drone Shipping"
 
-
+print()
 print("Your lowest cost of shipping would be {} at ${:.2f}".format(shipping_type,min(all_costs)))
